@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: white; */
+}
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+}
+body{
+    font-family: Montserrat;
+    font-weight: 500;
+    color:black;
+
+}
+p{
+    font-family: Montserrat;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container{
+    max-width: 1180px;
+    /* margin-inline: auto; */
+    margin-left: 7rem;
+    overflow: hidden;
+}
+nav{
+    background-color: white;
+    box-shadow: 0 0 8px black;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    color: black;
+
+}
+.main-nav{
+    justify-content: space-between;
+      
+}
+.company-logo{
+    width: 220px;
+    margin-left: -4rem;
+    /* background: linear-gradient(to right ,#fe015a 35%, rgb(255,3,3));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color:transparent;
+    animation: gradient 3s linear infinite; */
+
+    
+}
+/* @keyframes gradient{
+    0%{
+        background-position: 0% 75%;
+    }
+    50%{
+        background-position: 100% 30%;
+    }
+    100%{
+        background-position: 0% 70%;
+    }
+} */
+.nav-links ul{
+    gap: 20px;
+    font-size: 18px;
+    font-weight: w500;
+}
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    font-weight: bold;
+    color: var(--accent-color);
+    transition: all 0.3s ease-in;
+}
+.hover-link:active{
+    color: red;
+}
+.nav-item.active{
+    color:var(--accent-color);
+}
+.search-bar{
+    height: 32px;
+    gap: 8px;
+}
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: Montserrat;
+}
+.news-input:hover{
+    width: 250px;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+}
+.search-button{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Montserrat;
+}
+.search-button:hover{
+    background-color: var(--accent-color-dark);
+    border-radius: 15px;
+    width: 120px;
+    transition: all 1s ease;
+    
+    
+}
+#toggle-dark{
+    font-size: 20px;
+    cursor: pointer;
+}
+#toggle-dark:hover{
+    color: var(--accent-color);
+    transition: all 0.3s ease-in;
+}
+
+
+#about-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+#about-icon:hover{
+    
+    color: var(--accent-color);
+    transition: all 0.3s ease-in;
+}
+#live-link{
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+#live-link:hover{
+  
+    color: var(--accent-color);
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+main{
+    padding-block: 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.card-container{
+    
+    justify-content: space-between;
+    /* flex-wrap:wrap; */
+    align-items: start;
+    
+
+}
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #bbd0e2;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+.card-header{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+#news-image{
+    height: 100%;
+    height: 180px;
+}
+
+.card-content{
+    padding: 12px;
+}
+#news-title{
+    color: black;
+}
+
+.news-source{
+    margin-block: 12px;
+}
+#showmore-btn{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Montserrat;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 6rem;
+    
+}
+#showmore-btn:hover{
+    background-color: var(--accent-color-dark);
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+*{
+    background-color: white;
+    color: black;
+}
