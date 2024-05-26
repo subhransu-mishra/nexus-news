@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/assets/images/Nexus_News_logo - Copy.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <style>
-        .dark-mode {
-          background-color: #121212;
-          color: #ffffff;
-        }
-      </style>
+    
 </head>
 <body>
     <nav>
@@ -29,6 +24,8 @@
                     <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
                 </ul>
             </div>
+
+            
             <div class="search-bar flex">
                 <input id="search-text" type="text" class="news-input" placeholder="e.g: elections">
                 <button id="search-button" class="search-button">Search</button>
@@ -42,13 +39,16 @@
             <div class="about">
                 <i class="bi bi-headset" id="about-icon"></i>
             </div>
+            <div class="hamburger-menu">
+                <i class="bi bi-list" id="hamburger-menu"></i>
+            </div>
             
         </div>
     </nav>
 
     <span class="loader" id="loader"></span>
 
-    <main>
+    <main class="main">
         <div class="card-container container flex" id="cards-container">
             
         </div>
