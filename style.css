@@ -43,7 +43,7 @@ ul{
 }
 nav{
     background-color: black;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 10px var(--accent-color);
     position: fixed;
     top: 0;
     z-index: 99;
@@ -57,9 +57,12 @@ nav{
       
 }
 .company-logo{
-    width: 230px;
-    margin-left: -4rem;
-     
+    margin-top: 5px;
+    width: 150px;
+    /* margin-left: -4rem; */
+     border: 2px solid var(--accent-color);
+     box-shadow: 2px 2px 2px 2px #bbd0e2;
+     transition: all 1s ease-in;
 }
 .nav-links ul{
     gap: 20px;
@@ -91,6 +94,7 @@ nav{
     border-radius: 4px;
     border: 2px solid #bbd0e2;
     font-family: Montserrat;
+    color: black;
 }
 .news-input:hover{
     width: 250px;

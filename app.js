@@ -95,25 +95,7 @@ about.addEventListener("click",()=>{
     window.location.href = "about_us.html";
 });
 
-        // const toggle = document.getElementById("toggle-dark");
-        // const body = document.querySelector("body");
 
-        // toggle.addEventListener("click",function(){
-            
-        //     this.classList.toggle("bi-moon");
-        //     if(this.classList.toggle("bi-sun")){
-        //         console.log("dark mode");
-        //         body.style.backgroundColor = "black";
-        //         body.style.color = "white";
-        //         body.style.transition = "2s";
-        //     }
-        //     else{
-        //         console.log("light mode")
-        //         body.style.backgroundColor = "white";
-        //         body.style.color = "black";
-        //         body.style.transition = "2s";
-        //     }
-        // })
 
  
         
