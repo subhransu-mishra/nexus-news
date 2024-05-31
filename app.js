@@ -1,16 +1,6 @@
 const API_KEY = "f48ca7a1238148878265cec273414a3b";
 const url = "https://newsapi.org/v2/everything?q=";
 
-// const loader = document.getElementById('loader');
-
-// function showLoader() {
-//     loader.style.display = 'block';
-// }
-
-// function hideLoader() {
-//     loader.style.display = 'none';
-// }
-
 window.addEventListener("load",()=>{
     fetchNews("India");
 });
@@ -19,7 +9,7 @@ function reload(){
 };
 
 async function fetchNews(query){
-    // showLoader();
+
     try{
         const res = await fetch(`${url} ${query}&apiKey=${API_KEY}`);
         const data = await res.json();
@@ -62,6 +52,8 @@ function fillDataInCard(cardClone,article){
 
     newsSource.innerHTML = `Souce - ${article.source.name} | ${date}`;
 
+    
+
     cardClone.firstElementChild.addEventListener("click",()=>{
         window.open(article.url,"_blank");
     });
@@ -97,16 +89,27 @@ about.addEventListener("click",()=>{
 
 
 
- 
+const shareBtn = document.getElementById("share-btn");
+const overlay = document.querySelector(".overlay");
+const shareModal = document.querySelector(".share");
+
+const title = window.document.title;
+const shareUrl = window.document.location.href;
+
+shareBtn.addEventListener("click",function(event){
+    event.stopPropagation();
+    if (navigator.share){
+        navigator.share({
+            title:`${title}`,
+            url:`${shareUrl}`
+        }).then(()=>{
+            console.log("Thanks for sharing");
+        })
+        .catch(console.error);
+    }
+    else{
+        overlay.classList.add("show-share");
+        shareModal.classList.add("show-share");
         
-
-
-
-
-
-
-
-
-
-
-
+    }
+})

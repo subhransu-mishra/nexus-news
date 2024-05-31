@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus News - Get connected Get Informed</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/assets/images/logo_png.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
@@ -11,7 +12,7 @@
 </head>
 <body>
     <nav>
-        <div class="main-nav container flex">
+        <div class="main-nav container flex" data-aos="fade-down" data-aos-duration="1000">
             <a href="#" class="comapny-logo" onclick="reload()">
                 <img src="/assets/images/logo_png.png" class="company-logo">
             </a>
@@ -34,7 +35,7 @@
                 <i class="bi bi-sun" id="toggle-dark"></i>
             </div>
             <div class="live">
-                <a href="https://www.youtube.com/live/w9uJg68CV4g?si=Byb582G7YCe5qNWz" ><i class="bi bi-broadcast-pin" id="live-link"></i></a>
+                <a href="https://www.youtube.com/live/6smlpd2BS5k?si=AdVNFo5IfIf-lKWp" ><i class="bi bi-broadcast-pin" id="live-link"></i></a>
             </div>
             <div class="about">
                 <i class="bi bi-headset" id="about-icon"></i>
@@ -55,8 +56,17 @@
         
 
     </main>
+    <div class="overlay">
+        <div class="share">
+            <h2 id="h2-share">Share Now</h2>
+            <button class="share-btn1">Social Link</button>
+            <button class="share-btn1">Social Link</button>
+            <button class="share-btn1">Social Link</button>
+        </div>
+    </div>
+
     <template id="template-news-card">
-        <div class="card">
+        <div class="card" data-aos="flip-left">
             <div class="card-header">
                 <img id="news-image" src="https://via.placeholder.com/400x200"alt="news"/>
             </div>
@@ -66,11 +76,15 @@
                 <h6 class="news-source">End Gadget 12/1/2204</h6>
                 <p class="news-description" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, tempora saepe fuga perferendis nemo temporibus praesentium optio porro pariatur? Ut corrupti nostrum, ex ad ipsa consectetur? Explicabo ea dolore velit?</p>
                 <button id="showmore-btn">Show more</button>
+                <button id="share-btn" id="share-btn"><i class="bi bi-share-fill"></i></button>
             </div>
         </div>
     </template>
 
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="app.js"></script>
 </body>
 </html>

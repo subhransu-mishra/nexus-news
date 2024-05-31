@@ -19,6 +19,7 @@ body{
     color:black;
 
 }
+
 p{
     font-family: Montserrat;
     
@@ -161,7 +162,7 @@ nav{
 
 
 main{
-    padding-block: 20px;
+    padding-block: 30px;
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
@@ -237,11 +238,69 @@ main{
     transition: all 0.5s ease;
     border-radius: 10px;
 }
-/* *{
+#share-btn{
     background-color: black;
+    color: white;
+    padding: 8px 8px;
+    border: none;
     
-} */
+    cursor: pointer;
+    font-family: Montserrat;
+    
+    position: relative;
+    left: 17rem;
+    bottom: 2rem;
+    
+}
+#share-btn i{
+    font-size: 15px;
+}
+#share-btn:hover{
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+.overlay{
+    color: white;
+    opacity: 1;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
+.share{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin: auto;
+    width: 50%;
+    z-index: 1;
+    padding: 1rem;
+    background:black;
+    
+}
+.share , .overlay{
+    display: none;
+}
+.show-share{
+    display: block;
+}
+#h2-share{
+    margin: 0;
 
+}
+.share-btn1{
+    border: none;
+    padding: .8rem 1.2rem;
+    margin-top: 3rem;
+    width: 32%;
+    color: black;
+    font-weight: bold;
+}
 
 
 @media (max-width: 770px) {
@@ -300,6 +359,8 @@ main{
         
     }
 } 
+
+
 
 
 
