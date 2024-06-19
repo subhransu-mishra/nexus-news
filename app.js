@@ -96,20 +96,3 @@ const shareModal = document.querySelector(".share");
 const title = window.document.title;
 const shareUrl = window.document.location.href;
 
-shareBtn.addEventListener("click",function(event){
-    event.stopPropagation();
-    if (navigator.share){
-        navigator.share({
-            title:`${title}`,
-            url:`${shareUrl}`
-        }).then(()=>{
-            console.log("Thanks for sharing");
-        })
-        .catch(console.error);
-    }
-    else{
-        overlay.classList.add("show-share");
-        shareModal.classList.add("show-share");
-        
-    }
-})
