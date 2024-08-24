@@ -1,21 +1,5 @@
-fetch('https://newsapi.org/v2/everything?q=', {
-    method: 'GET'
-  }).then(response => {
-    if (response.status === 426) {
-      const upgradeHeader = response.headers.get('Upgrade');
-      console.log(`Server prefers protocol upgrade to: ${upgradeHeader}`);
-      
-      // Based on the upgradeHeader value, you can implement logic to switch protocols
-      // For instance, if the server prefers HTTP/2, you may need to use a different client library that supports HTTP/2
-    } else {
-      return response.json();
-    }
-  }).then(data => {
-    // Process the response data
-  }).catch(error => {
-    console.error('Error fetching the resource:', error);
-  });
-const API_KEY = "f48ca7a1238148878265cec273414a3b";
+
+const API_KEY = "83d362e1d8d14d64b88003f228deddbf";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load",()=>{
@@ -112,4 +96,10 @@ const shareModal = document.querySelector(".share");
 
 const title = window.document.title;
 const shareUrl = window.document.location.href;
+
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
 
